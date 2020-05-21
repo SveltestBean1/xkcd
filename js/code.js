@@ -27,7 +27,9 @@ xmlhttp.onreadystatechange = function() {
             }
         }
     } else {
-        document.getElementById("comicno").innerHTML = "Comic could not be fetched."
+        if (!window.location.href.includes("random")) {
+            document.getElementById("comicno").innerHTML = "Comic could not be fetched."
+        }
     } 
 };
 if (k) {
