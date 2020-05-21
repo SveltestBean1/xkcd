@@ -1,4 +1,4 @@
-const replaceall = (str, rep1, rep2) => {
+function replaceall (str, rep1, rep2) {
     return str.split(rep1).join(rep2)
 };
 function getRandomInt(min, max) {
