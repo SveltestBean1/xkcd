@@ -16,7 +16,7 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         data = JSON.parse(this.responseText);
         const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: 'numeric'}) 
-        const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(new Date(data.year, data.month, data.day))
+        const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(new Date(data.year, data.month-1, data.day))
         if (window.location.href.includes("random")) {
             window.location.href = window.location.href.split("?random?v=")[0] + "?v=" + getRandomInt(1, data.num);
         } else {
