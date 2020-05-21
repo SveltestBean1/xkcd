@@ -7,9 +7,9 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function randomsearch() {
-    window.location.href = window.location.href.split("?v=")[0] + "?random?v=2048";
+    window.location.href = window.location.href.split("?v=")[0] + "?random";
 }
-let v; let k = window.location.href.includes("?");
+let v; let k = window.location.href.includes("=");
 let data;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
@@ -18,7 +18,7 @@ xmlhttp.onreadystatechange = function() {
         const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: 'numeric'}) 
         const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(new Date(data.year, data.month-1, data.day))
         if (window.location.href.includes("random")) {
-            window.location.href = window.location.href.split("?random?v=")[0] + "?v=" + getRandomInt(1, data.num);
+            window.location.href = window.location.href.split("?random")[0] + "?v=" + getRandomInt(1, data.num);
         } else {
             if (k) {
                 document.getElementById("comicno").innerHTML = data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Link: <a href='https://xkcd.com/" + window.location.href.split("?v=")[1] + "'>xkcd</a>"
