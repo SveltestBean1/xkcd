@@ -28,7 +28,11 @@ xmlhttp.onreadystatechange = function() {
         }
     } else {
         if (!window.location.href.includes("random")) {
-            document.getElementById("comicno").innerHTML = "Comic could not be fetched."
+            if (window.location.href.split("?v=")[1] == 404) {
+                document.getElementById("comicno").innerHTML = "404, Not Found<br>Published on 1 April 2008<br>Link: <a href='https://xkcd.com/404'>xkcd</a>"
+            } else {
+                document.getElementById("comicno").innerHTML = "Comic could not be fetched.";
+            }
         }
     } 
 };
