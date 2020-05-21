@@ -6,8 +6,12 @@ let data;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    data = myObj;
+    data = JSON.parse(this.responseText);
+    if (k) {
+        document.getElementById("comicno").innerHTML = "Current comic: " + data.num + "<br>Published on " + new Date(data.year, data.month, data.day);
+    } else {
+        document.getElementById("comicno").innerHTML = "Latest comic: " + data.num + "<br>Published on " + new Date(data.year, data.month, data.day);
+    }
   }
 };
 if (k) {
