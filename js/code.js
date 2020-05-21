@@ -7,11 +7,16 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     data = JSON.parse(this.responseText);
+    const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: 'numeric'}) 
+    const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(new Date(data.year, data.month, data.day))
     if (k) {
-        document.getElementById("comicno").innerHTML = "Current comic: " + data.num + "<br>Published on " + new Date(data.year, data.month, data.day);
+        document.getElementById("comicno").innerHTML = "Current comic: " + data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Link: <a href='https://xkcd.com'>xkcd</a>";
     } else {
-        document.getElementById("comicno").innerHTML = "Latest comic: " + data.num + "<br>Published on " + new Date(data.year, data.month, data.day);
+        v = window.location.href.split("?v=")[1];
+        document.getElementById("comicno").innerHTML = "Latest comic: " + data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Link: <a href='https://xkcd.com/" + v + "'>xkcd</a>";
     }
+  } else {
+    document.getElementById("comicno").innerHTML = "Comic could not be fetched."
   }
 };
 if (k) {
