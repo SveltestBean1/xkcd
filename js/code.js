@@ -12,9 +12,9 @@ xmlhttp.onreadystatechange = function() {
 };
 if (k) {
     v = window.location.href.split("?v=")[1];
-    v = "https://xkcd.com/"+v+"/info.0.json";
+    v = "https://cors-anywhere.herokuapp.com/https://xkcd.com/"+v+"/info.0.json";
 } else {
-    v = "https://xkcd.com/info.0.json";
+    v = "https://cors-anywhere.herokuapp.com/https://xkcd.com/info.0.json";
 }
 xmlhttp.open("GET", v, true);
 xmlhttp.send();
