@@ -107,7 +107,7 @@ a:hover, a:active {
     }
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="button"] {
     font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     height: 24px;
     border: 0px solid #fff;
@@ -120,14 +120,14 @@ input[type="submit"] {
     margin-top: 10px;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, input[type="button"]:hover {
     background-color: #777;
     color: #ffffff;
     cursor: pointer;
     animation: hover .5s ease-in-out;
 }
 
-input[type="submit"]:not(:hover) {
+input[type="submit"]:not(:hover), input[type="button"]:not(:hover) {
     animation: nohover .5s ease-in-out;
 }
 

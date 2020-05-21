@@ -42,9 +42,10 @@ h1 {
 .content div{
     border: 0px solid #000;
     border-radius: 10px;
-    background-color: #efefef;
+    background-color: #efefefcc;
     padding: 2px;
     padding-left: 10px;
+    margin-top: 10px;
 }
 
 .content div {
@@ -71,18 +72,32 @@ a:hover, a:active {
     text-align: right;
 }
 
-input[type="submit"]:hover {
+input[type="submit"], input[type="button"] {
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    height: 24px;
+    border: 0px solid #fff;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
     background-color: #777;
     color: #ffffff;
     cursor: pointer;
     animation: hover .5s ease-in-out;
 }
 
-input[type="submit"]:not(:hover) {
+input[type="submit"]:not(:hover), input[type="button"]:not(:hover) {
     animation: nohover .5s ease-in-out;
 }
 
 input[type="number"] {
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     color: #fff;
     width: 180px;
     height: 20px;

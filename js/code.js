@@ -10,10 +10,9 @@ xmlhttp.onreadystatechange = function() {
     const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: 'numeric'}) 
     const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(new Date(data.year, data.month, data.day))
     if (k) {
-        document.getElementById("comicno").innerHTML = "Current comic: " + data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Link: <a href='https://xkcd.com'>xkcd</a>";
+        document.getElementById("comicno").innerHTML = "Current comic: " + data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Link: <a href='https://xkcd.com/" + window.location.href.split("?v=")[1] + "'>xkcd</a>"
     } else {
-        v = window.location.href.split("?v=")[1];
-        document.getElementById("comicno").innerHTML = "Latest comic: " + data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Link: <a href='https://xkcd.com/" + v + "'>xkcd</a>";
+        document.getElementById("comicno").innerHTML = "Latest comic: " + data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Link: <a href='https://xkcd.com'>xkcd</a>";
     }
   } else {
     document.getElementById("comicno").innerHTML = "Comic could not be fetched."

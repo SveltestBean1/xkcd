@@ -20,7 +20,7 @@
             <div>
                 <h1><a href="https://sveltestbean1.github.io/">Bobby Lee</a> - xkcd</h1>
             </div>
-            <p class="iewarning">Please use Firefox. Or Chrome. Not Edge or IE.</p>
+            <p class="iewarning">Please use Firefox. Or Chrome.</p>
         </div>
         <div class="content">
             <div>
@@ -29,10 +29,14 @@
                 <form>
                     <input type="number" name="v" placeholder="xkcd query" min="1">
                     <input type="submit" value="Search"></input>
+                    <input type="button" value="Random" onclick="randomsearch()">
                 </form>
-                <h3 id="comicno"></h3>
+                <div class="infobox">
+                    <h3 id="comicno">Loading...</h3>
+                </div>
             </div>
         </div>
+        
         <noscript>
             <h3>Please enable Javascript to access this page.</h3>
         </noscript>
