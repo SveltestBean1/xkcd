@@ -83,19 +83,14 @@ input[type="submit"], input[type="button"] {
     padding-left: 5px;
     padding-right: 5px;
     margin-top: 10px;
+    transition: background-color 0.5s;
 }
 
 input[type="submit"]:hover, input[type="button"]:hover {
     background-color: #777;
     color: #ffffff;
     cursor: pointer;
-    animation: hover .5s ease-in-out;
 }
-
-input[type="submit"]:not(:hover), input[type="button"]:not(:hover) {
-    animation: nohover .5s ease-in-out;
-}
-
 input[type="number"] {
     font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     color: #fff;
