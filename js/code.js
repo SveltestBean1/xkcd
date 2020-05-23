@@ -21,9 +21,9 @@ xmlhttp.onreadystatechange = function() {
             window.location.href = window.location.href.split("?random")[0] + "?v=" + getRandomInt(1, data.num);
         } else {
             if (k) {
-                document.getElementById("comicno").innerHTML = data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Link: <a href='https://xkcd.com/" + window.location.href.split("?v=")[1] + "'>xkcd</a>"
+                document.getElementById("comicno").innerHTML = data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Links: <a href='https://xkcd.com/" + window.location.href.split("?v=")[1] + "'>xkcd</a>, <a href='https://www.explainxkcd.com/wiki/index.php/" + window.location.href.split("?v=")[1] + "'>explainxkcd</a><br><img src='" + data.img + "'>";
             } else {
-                document.getElementById("comicno").innerHTML = "Latest comic: " + data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Link: <a href='https://xkcd.com'>xkcd</a>";
+                document.getElementById("comicno").innerHTML = "Latest comic: " + data.num + ", " + data.safe_title + "<br>Published on " + `${day} ${month} ${year}` + "<br>Links: <a href='https://xkcd.com/" + data.num + "'>xkcd</a>, <a href='https://www.explainxkcd.com/wiki/index.php/" + data.num + "'>explainxkcd</a><br><img src='" + data.img + "'>";
             }
         }
     } else {
