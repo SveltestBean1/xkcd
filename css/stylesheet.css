@@ -1,5 +1,5 @@
 body {
-    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
     background-color: #fefefe;
 }
 
@@ -108,7 +108,7 @@ a:hover, a:active {
 }
 
 input[type="submit"], input[type="button"] {
-    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
     height: 24px;
     border: 0px solid #fff;
     background-color: #555;
@@ -127,7 +127,7 @@ input[type="submit"]:hover, input[type="button"]:hover {
     cursor: pointer;
 }
 input[type="number"] {
-    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
     color: #fff;
     width: 180px;
     height: 20px;
