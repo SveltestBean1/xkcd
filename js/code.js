@@ -29,7 +29,7 @@ xmlhttp.onreadystatechange = function() {
     } else {
         if (!window.location.href.includes("random")) {
             if (window.location.href.split("?v=")[1] == 404) {
-                document.getElementById("comicno").innerHTML = "404, Not Found<br>Published on 1 April 2008<br>Link: <a href='https://xkcd.com/404'>xkcd</a>"
+                document.getElementById("comicno").innerHTML = "404, Not Found<br>Published on 1 April 2008<br>Link: <a href='https://xkcd.com/404'>xkcd</a>, <a href='https://www.explainxkcd.com/wiki/index.php/404'>explainxkcd</a>"
             } else {
                 document.getElementById("comicno").innerHTML = "Comic could not be fetched.";
             }
