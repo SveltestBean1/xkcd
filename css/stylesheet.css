@@ -1,114 +1,52 @@
 body {
-    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
-    background-color: #fefefe;
+    font-family: 'Google Sans', Arial, Helvetica, sans-serif;
+    background-color: #1f232a;
+    color: #eee;
 }
 
-h1 {
-    font-size: 24px;
-}
-
-.title {
+header {
     position: fixed;
+    background: #5269aa;
     top: 0px;
     left: 0px;
-    margin: 0px;
-    padding: 3px;
-    padding-left: 10px;
     width: 100%;
-    height: 54px;
-    background-color: #eeeeee;
-    z-index: 100;
-    color: #0f0f0f;
+    padding: 15px;
+    height: 15px;
+    box-shadow: 0px 5px 5px #000;
+    font-weight: 500;
 }
 
-.title div{
-    font-size: 26px;
-    width: 40%;
-    letter-spacing: 0px;
-    transition: letter-spacing 1s;
-}
-
-.title div:hover{
-    letter-spacing: 10px;
+p {
+    margin: 0px;
 }
 
 .content {
-    margin-left: 12.5%;
+    margin-left: 8%;
     margin-top: 90px;
     width: 75%;
-    color: #0f0f0f;
 }
 
-.content div{
-    border: 0px solid #000;
-    border-radius: 10px;
-    background-color: #efefefcc;
-    padding: 2px;
-    padding-left: 10px;
-    margin-top: 10px;
+.white {
+    text-decoration: none;
+    color: #eee;
+    transition: none;
 }
 
-.content div {
-    text-align: center;
+.white:hover, .white:active {
+    color: #eee;
 }
 
 a {
-    text-decoration: none;
-}
-
-a:link, a:visited {
-    color: #0f0f0f;
-    font-weight: bold;
+    color: #8f9dc4;
     transition: color 0.5s ease-in-out;
 }
 
 a:hover, a:active {
-    color: #444;
-}
-
-.iewarning {
-    display: none;
-    text-align: right;
-}
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .content div{
-        background-color: #efefef;
-    }
-    .title div{
-        display: inline-block;
-    }
-    .iewarning {
-        display: inline-block;
-    }
-}
-
-@supports (-ms-accelerator:true) {
-    .content div{
-        background-color: #efefef;
-    }
-    .title div{
-        display: inline-block;
-    }
-    .iewarning {
-        display: inline-block;
-    }
-}
-
-@supports (-ms-ime-align:auto) {
-    .content div{
-        background-color: #efefef;
-    }
-    .title div{
-        display: inline-block;
-    }
-    .iewarning {
-        display: inline-block;
-    }
+    color: #465fa5;
 }
 
 input[type="submit"], input[type="button"] {
-    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    font-family: 'Google Sans', Arial, Helvetica, sans-serif;
     height: 24px;
     border: 0px solid #fff;
     background-color: #555;
@@ -127,7 +65,7 @@ input[type="submit"]:hover, input[type="button"]:hover {
     cursor: pointer;
 }
 input[type="number"] {
-    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    font-family: 'Google Sans', Arial, Helvetica, sans-serif;
     color: #fff;
     width: 180px;
     height: 20px;

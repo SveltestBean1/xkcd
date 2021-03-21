@@ -14,7 +14,7 @@ let data;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        data = JSON.parse(this.responseText);
+        data = JSON.parse(JSON.parse(this.responseText).contents);
         const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: 'numeric'}) 
         const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(new Date(data.year, data.month-1, data.day))
         if (window.location.href.includes("random")) {
@@ -38,9 +38,9 @@ xmlhttp.onreadystatechange = function() {
 };
 if (k) {
     v = window.location.href.split("?v=")[1];
-    v = "https://cors-anywhere.herokuapp.com/https://xkcd.com/"+v+"/info.0.json";
+    v = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://xkcd.com/${v}/info.0.json`)}`;
 } else {
-    v = "https://cors-anywhere.herokuapp.com/https://xkcd.com/info.0.json";
+    v = `https://api.allorigins.win/get?url=${encodeURIComponent("https://xkcd.com/info.0.json")}`;
 }
 xmlhttp.open("GET", v, true);
 xmlhttp.send();
